@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Article - EcstacyBlog">
+    <title>Getting Started with Modern JavaScript: ES6+ Features Explained - EcstacyBlog</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-top-ad">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+            
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="site-title">🚀 EcstacyBlog</h1>
+                    <p class="site-tagline">Technology Insights | Programming Tutorials | Tech News</p>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <main class="main-content">
+                <!-- Article -->
+                <article class="article-post">
+                    <div class="article-header">
+                        <span class="post-category">JavaScript</span>
+                        <h1>Getting Started with Modern JavaScript: ES6+ Features Explained</h1>
+                        <div class="article-meta">
+                            <span class="post-date">August 13, 2026</span>
+                            <span class="post-author">By Tech Writers</span>
+                            <span class="read-time">8 min read</span>
+                        </div>
+                    </div>
+
+                    <img src="https://via.placeholder.com/800x400?text=Modern+JavaScript" alt="Modern JavaScript" class="article-image">
+
+                    <!-- Ad Unit - Top of Article -->
+                    <section class="article-ad">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                             data-ad-slot="2345678901"
+                             data-ad-format="auto"
+                             data-full-width-responsive="false"></ins>
+                    </section>
+
+                    <div class="article-content">
+                        <h2>Introduction</h2>
+                        <p>
+                            JavaScript has evolved dramatically over the past decade. With the introduction of ES6 (also known as ES2015) and subsequent yearly updates, the language has become more powerful, expressive, and enjoyable to work with. Whether you're building web applications, mobile apps, or backend services with Node.js, understanding modern JavaScript features is essential.
+                        </p>
+                        <p>
+                            In this comprehensive guide, we'll explore the most important ES6+ features that every JavaScript developer should know. From arrow functions to async/await, we'll break down complex concepts into digestible pieces with practical examples.
+                        </p>
+
+                        <h2>1. Arrow Functions</h2>
+                        <p>
+                            Arrow functions provide a concise syntax for writing functions and automatically bind the <code>this</code> keyword. They're perfect for callbacks and functional programming patterns.
+                        </p>
+                        <pre><code>// Traditional function
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const add = (a, b) => a + b;
+
+// Multi-line arrow function
+const greet = (name) => {
+    const greeting = `Hello, ${name}!`;
+    return greeting;
+};</code></pre>
+
+                        <p>
+                            Arrow functions are especially useful in array methods like <code>map()</code>, <code>filter()</code>, and <code>reduce()</code>:
+                        </p>
+                        <pre><code>const numbers = [1, 2, 3, 4, 5];
+
+// Mapping with arrow functions
+const doubled = numbers.map(n => n * 2); // [2, 4, 6, 8, 10]
+
+// Filtering with arrow functions
+const evens = numbers.filter(n => n % 2 === 0); // [2, 4]</code></pre>
+
+                        <!-- Ad Unit - Middle of Article -->
+                        <div class="article-ad-mid">
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                                 data-ad-slot="3456789012"
+                                 data-ad-format="auto"
+                                 data-full-width-responsive="false"></ins>
+                        </div>
+
+                        <h2>2. Template Literals</h2>
+                        <p>
+                            Template literals use backticks and allow you to embed expressions using <code>${}</code> syntax. They support multi-line strings and are much more readable than string concatenation.
+                        </p>
+                        <pre><code>// Traditional string concatenation
+const name = "Alice";
+const age = 28;
+const message = "My name is " + name + " and I am " + age + " years old.";
+
+// Template literal
+const message = `My name is ${name} and I am ${age} years old.`;
+
+// Multi-line strings
+const html = `
+    &lt;div class="card"&gt;
+        &lt;h2&gt;${name}&lt;/h2&gt;
+        &lt;p&gt;Age: ${age}&lt;/p&gt;
+    &lt;/div&gt;
+`;</code></pre>
+
+                        <h2>3. Destructuring</h2>
+                        <p>
+                            Destructuring allows you to extract values from arrays and objects and assign them to variables in a single statement.
+                        </p>
+                        <pre><code>// Array destructuring
+const [first, second, ...rest] = [1, 2, 3, 4, 5];
+console.log(first); // 1
+console.log(rest);  // [3, 4, 5]
+
+// Object destructuring
+const person = { name: "Bob", age: 30, city: "NYC" };
+const { name, age } = person;
+
+// Nested destructuring
+const response = {
+    data: {
+        user: { id: 1, email: "user@example.com" }
+    }
+};
+const { data: { user: { email } } } = response;</code></pre>
+
+                        <h2>4. Classes</h2>
+                        <p>
+                            ES6 introduced a more familiar syntax for creating objects and dealing with inheritance. Classes are syntactic sugar over JavaScript's existing prototype-based inheritance.
+                        </p>
+                        <pre><code>class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(`${this.name} makes a sound`);
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, breed) {
+        super(name);
+        this.breed = breed;
+    }
+
+    speak() {
+        console.log(`${this.name} barks`);
+    }
+}
+
+const dog = new Dog("Rex", "Labrador");
+dog.speak(); // Rex barks</code></pre>
+
+                        <!-- Ad Unit - Article Sidebar -->
+                        <div class="article-ad-side">
+                            <ins class="adsbygoogle"
+                                 style="display:block"
+                                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                                 data-ad-slot="4567890123"
+                                 data-ad-format="vertical"
+                                 data-full-width-responsive="false"></ins>
+                        </div>
+
+                        <h2>5. Promises and Async/Await</h2>
+                        <p>
+                            Promises and async/await help you manage asynchronous code more elegantly. They make it easier to handle errors and chain operations.
+                        </p>
+                        <pre><code>// Using Promises
+fetch('/api/users')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+
+// Using async/await (cleaner!)
+async function getUsers() {
+    try {
+        const response = await fetch('/api/users');
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error(error);
+    }
+}</code></pre>
+
+                        <h2>6. Let and Const</h2>
+                        <p>
+                            <code>let</code> and <code>const</code> provide block-level scoping and prevent many common bugs that <code>var</code> can cause.
+                        </p>
+                        <pre><code>// var (function-scoped, can be re-declared)
+var x = 1;
+var x = 2; // OK
+
+// let (block-scoped, cannot be re-declared)
+let y = 1;
+let y = 2; // Error!
+
+// const (block-scoped, cannot be reassigned)
+const z = 1;
+z = 2; // Error!
+
+// Best practice: use const by default, let when reassignment is needed
+const name = "Alice";
+let counter = 0;
+counter++;
+console.log(counter); // 1</code></pre>
+
+                        <h2>Conclusion</h2>
+                        <p>
+                            Modern JavaScript features have made the language more expressive, readable, and powerful. By mastering these ES6+ features, you'll write cleaner, more maintainable code and become a more productive developer.
+                        </p>
+                        <p>
+                            Start incorporating these features into your projects today. The JavaScript community has overwhelmingly adopted these standards, and they're now considered essential knowledge for any developer working with the language.
+                        </p>
+
+                        <div class="article-tags">
+                            <span class="tag">#JavaScript</span>
+                            <span class="tag">#ES6</span>
+                            <span class="tag">#Programming</span>
+                            <span class="tag">#Tutorial</span>
+                        </div>
+                    </div>
+
+                    <!-- Ad Unit - Bottom of Article -->
+                    <section class="article-ad-bottom">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                             data-ad-slot="5678901234"
+                             data-ad-format="auto"
+                             data-full-width-responsive="false"></ins>
+                    </section>
+                </article>
+
+                <!-- Related Articles -->
+                <section class="related-articles">
+                    <h3 class="section-title">Related Articles</h3>
+                    <div class="posts-grid">
+                        <article class="post-card">
+                            <div class="post-image">
+                                <img src="https://via.placeholder.com/400x250?text=React+Advanced" alt="React Advanced">
+                            </div>
+                            <div class="post-content">
+                                <span class="post-category">React</span>
+                                <h3>Advanced React Patterns: Custom Hooks & Context</h3>
+                                <p class="post-excerpt">Learn advanced React patterns to write more scalable and maintainable code.</p>
+                                <a href="#" class="read-more-btn">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <img src="https://via.placeholder.com/400x250?text=TypeScript" alt="TypeScript">
+                            </div>
+                            <div class="post-content">
+                                <span class="post-category">TypeScript</span>
+                                <h3>Getting Started with TypeScript</h3>
+                                <p class="post-excerpt">Add type safety to your JavaScript projects with TypeScript.</p>
+                                <a href="#" class="read-more-btn">Read More →</a>
+                            </div>
+                        </article>
+
+                        <article class="post-card">
+                            <div class="post-image">
+                                <img src="https://via.placeholder.com/400x250?text=Node+Express" alt="Node Express">
+                            </div>
+                            <div class="post-content">
+                                <span class="post-category">Node.js</span>
+                                <h3>Building REST APIs with Express.js</h3>
+                                <p class="post-excerpt">Create powerful backend APIs using Express.js and Node.js.</p>
+                                <a href="#" class="read-more-btn">Read More →</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Sidebar Ad Unit -->
+                <div class="sidebar-ad">
+                    <h4>Sponsored</h4>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                         data-ad-slot="6789012345"
+                         data-ad-format="vertical"
+                         data-full-width-responsive="false"></ins>
+                </div>
+
+                <!-- About Author -->
+                <div class="sidebar-widget">
+                    <h4>About the Author</h4>
+                    <p>This article was written by our team of experienced JavaScript developers and tech educators passionate about helping others learn programming.</p>
+                </div>
+
+                <!-- Sidebar Ad Unit 2 -->
+                <div class="sidebar-ad">
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                         data-ad-slot="7890123456"
+                         data-ad-format="vertical"
+                         data-full-width-responsive="false"></ins>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <section class="footer-ad">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="8901234567"
+                     data-ad-format="auto"
+                     data-full-width-responsive="false"></ins>
+            </section>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>About EcstacyBlog</h5>
+                    <p>Your source for in-depth technology articles, programming tutorials, and tech insights.</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcstacyBlog. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <style>
+        .article-post {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            margin: 1rem 0;
+            color: #00d9ff;
+        }
+
+        .article-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .article-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            overflow: auto;
+        }
+
+        .article-content h2 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .article-content h2:first-of-type {
+            border-top: none;
+            margin-top: 1rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .article-content code {
+            background: var(--bg-light);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #00d9ff;
+            font-size: 0.9em;
+        }
+
+        .article-content pre {
+            background: var(--bg-light);
+            border-left: 4px solid #00d9ff;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .article-content pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: inherit;
+        }
+
+        .article-ad,
+        .article-ad-mid,
+        .article-ad-side,
+        .article-ad-bottom {
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(0, 217, 255, 0.3);
+        }
+
+        .article-ad {
+            margin: 2rem 0;
+        }
+
+        .article-ad-mid {
+            float: left;
+            max-width: 280px;
+            margin: 0 1.5rem 1rem 0;
+        }
+
+        .article-ad-side {
+            float: right;
+            max-width: 280px;
+            margin: 0 0 1rem 1.5rem;
+        }
+
+        .article-ad-bottom {
+            margin: 2rem 0;
+            max-width: 300px;
+            float: left;
+        }
+
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background: var(--secondary-color);
+        }
+
+        .related-articles {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .article-post {
+                padding: 1rem;
+            }
+
+            .article-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .article-content {
+                font-size: 1rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .article-ad,
+            .article-ad-mid,
+            .article-ad-side,
+            .article-ad-bottom {
+                max-width: 100% !important;
+                float: none !important;
+                margin: 1.5rem 0 !important;
+            }
+        }
+    </style>
+
+    <script src="script.js"></script>
+</body>
+</html>
